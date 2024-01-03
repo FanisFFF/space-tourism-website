@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.destination-container {
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+.crew-container {
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+.tech-container {
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+@media (min-width: 768px) {
+  .crew-container {
+    grid-template-areas:
+      "title"
+      "content"
+      "tabs"
+      "image";
+  }
+}
+
+@media (min-width: 1024px) {
+  .destination-container {
+    grid-template-areas:
+      ". title title ."
+      ". image  tabs."
+      ". image content .";
+  }
+  .crew-container {
+    grid-template-areas:
+      ". title title ."
+      ". content image ."
+      ". tabs image .";
+  }
+  .tech-container {
+    grid-template-areas:
+      ". title title title."
+      ". tabs content image ."
+      ". tabs content image .";
+  }
+}
